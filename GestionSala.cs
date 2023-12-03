@@ -41,8 +41,88 @@ namespace MyApp// Note: actual namespace depends on the project name.
                             break;
 
                         
-                        case 3:
+                        case 3:do
+                            {
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("\n-----------COMEDIA----------");
+                                Console.ForegroundColor = ConsoleColor.Blue;
+                                Console.WriteLine("1. Son como niños---------------$3.75");
+                                Console.WriteLine("2. La máscara-------------------$2.50");
+                                Console.WriteLine("3. Stuart Little----------------$4.50");
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.Write("¿Que pelicula deseas ver? ");
+                                Console.ResetColor();
+
+                                int pelicula;
+                                if (int.TryParse(Console.ReadLine(), out pelicula))
+                                {
+                                    switch (pelicula)
+                                    {
+                                        case 1:
+                                            Console.ForegroundColor = ConsoleColor.Blue;
+                                            Console.WriteLine("\n--------Son como niños--------");
+                                            Console.WriteLine("--------Asientos------");
+                                            Console.ForegroundColor = ConsoleColor.Green;
+                                            Console.Write("¿Cuantos asientos nesesita? ");
+                                            int asiento1 = Convert.ToInt32(Console.ReadLine());
+                                            double total1 = (asiento1 * 3.75);
+                                            Console.ForegroundColor = ConsoleColor.Magenta;
+                                            Console.WriteLine("\nPelicula a ver ..................Son como niños");
+                                            Console.WriteLine("Asientos reservados ............." + asiento1);
+                                            Console.WriteLine("Total a pagar ...................$" + total1);
+                                            Console.ResetColor();
+                                            SeleccionarFechaYHorario("Son como niños", asiento1, total1);
+                                            break;
+
+                                        case 2:
+                                            Console.ForegroundColor = ConsoleColor.Blue;
+                                            Console.WriteLine("\n--------La Máscara--------");
+                                            Console.WriteLine("--------Asientos------");
+                                            Console.ForegroundColor = ConsoleColor.Green;
+                                            Console.Write("¿Cuantos asientos nesesita? ");
+                                            int asiento2 = Convert.ToInt32(Console.ReadLine());
+                                            double total2 = (asiento2 * 2.50);
+                                            Console.ForegroundColor = ConsoleColor.Magenta;
+                                            Console.WriteLine("\nPelicula a ver ..................La Máscara");
+                                            Console.WriteLine("Asientos reservados ............." + asiento2);
+                                            Console.WriteLine("Total a pagar ...................$" + total2);
+                                            Console.ResetColor();
+                                            SeleccionarFechaYHorario("La Máscara", asiento2, total2);
+                                            break;
+
+                                        case 3:
+                                            Console.ForegroundColor = ConsoleColor.Blue;
+                                            Console.WriteLine("\n--------Stuart Little--------");
+                                            Console.WriteLine("--------Asientos------");
+                                            Console.ForegroundColor = ConsoleColor.Green;
+                                            Console.Write("¿Cuantos asientos nesesita? ");
+                                            int asiento3 = Convert.ToInt32(Console.ReadLine());
+                                            double total3 = (asiento3 * 4.50);
+                                            Console.ForegroundColor = ConsoleColor.Magenta;
+                                            Console.WriteLine("\nPelicula a ver ..................Stuart Little");
+                                            Console.WriteLine("Asientos reservados ............." + asiento3);
+                                            Console.WriteLine("Total a pagar ...................$" + total3);
+                                            Console.ResetColor();
+                                            SeleccionarFechaYHorario("La Máscara", asiento3, total3);
+                                            break;
+
+
+                                        default:
+                                            Console.WriteLine("Opción no válida");
+                                            break;
+                                    }
+
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\nEntrada no válida.");
+                                }
+                                break;
+
+                            } while (opciones != 3);
                             break;
+                        
+                            
                     }
                 }
                 else
